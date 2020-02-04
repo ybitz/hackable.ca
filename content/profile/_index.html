@@ -1,0 +1,24 @@
+---
+layout: single
+title: Profile
+---
+
+<h1> profile </h1>
+email: <span id="email"></span><br>
+username: <span id="uname"></span><br>
+score: <span id="score"></span><br>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resetPassword">
+    Reset Password
+</button>
+
+<script>
+    function contentInit() {
+        if (!userinfo.uid)
+            return window.location.assign('/');
+
+        document.getElementById('email').textContent = userinfo.email;
+        document.getElementById('uname').textContent = userinfo.uname;
+        document.getElementById('score').textContent = userinfo.score;
+    }
+</script>

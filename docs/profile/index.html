@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Profile | hackable.ca</title>
+    
+<link rel="stylesheet" href="/single.css">
+<style>
+    #navbar>#tab_profile { color: white; }
+</style>
+
+</head>
+
+<body>
+    
+<header>
+    <div class="capWidth">
+        <a id="logo" href="/">hackable.ca</a>
+        <div id="navbar">
+            <a id="tab_" href="/">home</a>
+            <a id="tab_challenges" href="/challenges/">challenges</a>
+            <a id="tab_scoreboard" href="/scoreboard/">scoreboard</a>
+            <a style="display:none;" id="tab_profile" href="/profile/">profile</a>
+            <a style="display:none;" id="tab_logout" href="/logout/">logout</a>
+            <a style="display:none;" id="tab_login" href="/login/">login</a>
+            <a style="display:none;" id="tab_register" href="/register/">register</a>
+        </div>
+    </div>
+</header>
+
+<div class="capWidth">
+    
+<h1> profile </h1>
+email: <span id="email"></span><br>
+username: <span id="uname"></span><br>
+score: <span id="score"></span><br>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resetPassword">
+    Reset Password
+</button>
+
+<script>
+    function contentInit() {
+        if (!userinfo.uid)
+            return window.location.assign('/');
+
+        document.getElementById('email').textContent = userinfo.email;
+        document.getElementById('uname').textContent = userinfo.uname;
+        document.getElementById('score').textContent = userinfo.score;
+    }
+</script>
+</div>
+
+<footer>
+    <div class="capWidth">
+        <span class="text-muted">copyright 2019 - hackable.ca </span>
+    </div>
+</footer>
+<script src="/single.js"></script>
+
+</body>
+
+</html>

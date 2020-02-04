@@ -1,0 +1,5 @@
+baseURL = "https://hackable.ca/"
+languageCode = "en-us"
+title = "hackable.ca"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+publishDir = "docs"

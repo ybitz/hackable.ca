@@ -1,0 +1,35 @@
+---
+layout: single
+title: Challenges
+---
+
+<h1>Challenges!</h1>
+<div id="challenges"></div>
+<script>
+     function challengeDetails(chal) {
+          alert(JSON.stringify(chal));
+     }
+     function contentInit() {
+          api('challenges').then(function (j) {
+               let chalDiv = document.getElementById('challenges')
+               for (let section of j) {
+                    let sectionTitle = document.createElement('h2');
+                    sectionTitle.textContent = section.title;
+                    chalDiv.appendChild(sectionTitle);
+
+                    let sectionDiv = document.createElement('div');
+                    for (let chal of section.chals) {
+                         let card = document.createElement('div');
+                         card.classList.add('challengeCard')
+                         card.style.backgroundColor = chal.solved ? "#28a745" : "#dc3545";
+                         card.innerHTML = `<b>${chal.title}</b><br>
+                                             ${chal.points} points`;
+                         card.onclick = () => challengeDetails(chal);
+                         sectionDiv.appendChild(card);
+                    }
+                    chalDiv.appendChild(sectionDiv);
+
+               }
+          }).catch(alert);
+     }
+</script>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://hackable.ca/challenges/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hackable.ca/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hackable.ca/login/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hackable.ca/logout/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hackable.ca/profile/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hackable.ca/register/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hackable.ca/scoreboard/</loc>
+  </url>
+  
+</urlset>

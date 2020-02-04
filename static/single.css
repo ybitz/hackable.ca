@@ -1,0 +1,74 @@
+html {
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: rgba(255, 255, 204, .15);
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 50px 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 50px;
+    background-color: #f5f5f5;
+    display: block;
+}
+
+header {
+    line-height: 50px;
+    background-color: #343a40;
+}
+
+header a {
+    text-decoration: none;
+}
+
+#logo {
+    margin-right: 30px;
+    color: white;
+}
+
+#navbar {
+    display: inline-flex;
+}
+
+#navbar>a {
+    margin: 0 20px;
+    color: rgba(255, 255, 255, .5);
+}
+
+.capWidth {
+    margin: auto;
+    max-width: 900px;
+}
+
+/* begin page-specific styles */
+
+#scoreboard {
+    text-align: left;
+    width: 100%;
+    line-height: 2em;
+}
+
+#scoreboard td {
+    padding: 10px;
+    border-top: 1px solid black;
+}
+
+.challengeCard {
+    display: inline-block;
+    padding: 1em 2em;
+    margin: 1em;
+    border-radius: 4px;
+    color: white;
+}
