@@ -23,17 +23,29 @@
             <a id="tab_scoreboard" href="/scoreboard/">scoreboard</a>
             <a style="display:none;" id="tab_profile" href="/profile/">profile</a>
             <a style="display:none;" id="tab_logout" href="/logout/">logout</a>
-            <a style="display:none;" id="tab_login" href="/login/">login</a>
             <a style="display:none;" id="tab_register" href="/register/">register</a>
+            <a style="display:none;" id="tab_login" href="/login/">login</a>
         </div>
     </div>
 </header>
 
 <div class="capWidth">
     
-<h3>Logging out...</h3>
+<h3 id="logout_text">Logging out...</h3>
 <script>
-    setTimeout(() => location.assign('/'), 300);
+    function contentInit() {
+        api('logout').then(function (j) {
+            if (j.ok) {
+                localStorage.removeItem('sessionToken');
+                sessionStorage.removeItem('sessionToken');
+                location.assign('/');
+            } else {
+                console.log(j);
+                document.getElementById('logout_text')
+                    .textContent = "Something wen't wrong.";
+            }
+        }).catch(loadingError);
+    }
 </script>
 </div>
 

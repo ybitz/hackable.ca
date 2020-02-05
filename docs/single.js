@@ -1,22 +1,41 @@
 let userinfo;
 
-function api(path) {
+function loadingError(e) {
+    alert(e);
+}
+
+function api(path, args = false) {
     // lol api
-    return fetch('/api/' + path).then(x => x.json());
+    let apiURL = '/api/';
+    return (args ?
+        fetch(apiURL + path, { cache: "no-cache", method: 'POST', body: JSON.stringify(args) }) :
+        fetch(apiURL + path, { cache: "no-cache" })
+    ).then(x => x.json());
+}
+
+function unhideElements(elems) {
+    for (let c of elems)
+        document.getElementById(c).style.display = '';
 }
 
 window.addEventListener('load', function () {
+
+    if (!(localStorage.getItem('sessionToken') ||
+        sessionStorage.getItem('sessionToken'))) {
+
+        unhideElements(['tab_login', 'tab_register']);
+        if (window['contentInit']) contentInit();
+        return;
+    }
+
     api('/userinfo').then(function (x) {
         userinfo = x;
 
-        let showControls = userinfo.uid ?
+        unhideElements(userinfo.username ?
             ['tab_profile', 'tab_logout'] :
-            ['tab_login', 'tab_register'];
+            ['tab_login', 'tab_register']);
 
-        for (let c of showControls)
-            document.getElementById(c).style.display = '';
+        if (window['contentInit']) contentInit();
 
-        if (window['contentInit'])
-            contentInit();
-    }).catch(alert);
+    }).catch(loadingError);
 });

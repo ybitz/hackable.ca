@@ -23,8 +23,8 @@
             <a id="tab_scoreboard" href="/scoreboard/">scoreboard</a>
             <a style="display:none;" id="tab_profile" href="/profile/">profile</a>
             <a style="display:none;" id="tab_logout" href="/logout/">logout</a>
-            <a style="display:none;" id="tab_login" href="/login/">login</a>
             <a style="display:none;" id="tab_register" href="/register/">register</a>
+            <a style="display:none;" id="tab_login" href="/login/">login</a>
         </div>
     </div>
 </header>
@@ -32,7 +32,56 @@
 <div class="capWidth">
     
 <h2>Login!</h2>
+<form id="loginForm" action="javascript:void(0);">
+    <table>
+        <tr>
+            <th class="loginLabel">E-Mail Address:</th>
+            <th class="loginInput">
+                <input id="email" type="email" class="form-control" name="email" value="" required="" autofocus="">
+            </th>
+        </tr>
+        <tr>
+            <th class="loginLabel">Password:</th>
+            <th class="loginInput">
+                <input id="password" type="password" class="form-control" name="password" required="">
+            </th>
+        </tr>
+        <tr>
+            <th class="loginLabel">Remember Me</th>
+            <th class="loginInput">
+                <input id="rememberMe" type="checkbox" name="remember">
+            </th>
+        </tr>
+        <tr>
+            <th></th>
+            <th class="loginInput">
+                <input type="submit" name="remember" value="Login">
+            </th>
+        </tr>
+    </table>
+</form action="javascript:void(0);">
+<script>
+    function doLogin() {
+        api('login',
+            {
+                username: document.getElementById('email').value,
+                username: document.getElementById('password').value
+            }
+        ).then(function (j) {
+            if (!j.ok)
+                return document.getElementById('errorText').textContent = "Incorrect";
 
+            (document.getElementById('rememberMe').checked ? localStorage : sessionStorage)
+                .setItem('sessionToken', j.sessionToken);
+
+            window.location.assign('/');
+        });
+    }
+
+    function contentInit() {
+        document.getElementById('loginForm').addEventListener('submit', doLogin);
+    }
+</script>
 </div>
 
 <footer>
