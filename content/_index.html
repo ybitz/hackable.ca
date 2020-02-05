@@ -4,7 +4,7 @@ title: Home
 ---
 
 <h1>home</h1>
-<h4>welcome buckley310, </h4>
+<h4>Welcome<span id="username"></span>!</h4>
 <br>
 <p>hackable.ca is targeted at beginner computer enthusiasts who want to expand their computing knowledge. by doing these
     challenges, you will be exposed to a wide range of major vulnerabilities to programming languages and learn how to
@@ -22,3 +22,9 @@ title: Home
     <li>discord: <a href="https://discord.gg/9c2BDUz">https://discord.gg/9c2BDUz</a></li>
     <li>email: hackableca@gmail.com</li>
 </ul>
+<script>
+    function contentInit() {
+        if (userinfo)
+            document.getElementById('username').textContent = ' ' + userinfo.username;
+    }
+</script>

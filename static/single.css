@@ -72,3 +72,14 @@ header a {
     border-radius: 4px;
     color: white;
 }
+
+.loginLabel {
+    width: 200px;
+    text-align: right;
+}
+
+.loginInput {
+    width: auto;
+    text-align: left;
+    padding: 10px;
+}

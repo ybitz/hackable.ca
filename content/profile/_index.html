@@ -5,7 +5,7 @@ title: Profile
 
 <h1> profile </h1>
 email: <span id="email"></span><br>
-username: <span id="uname"></span><br>
+username: <span id="username"></span><br>
 score: <span id="score"></span><br>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resetPassword">
@@ -14,11 +14,11 @@ score: <span id="score"></span><br>
 
 <script>
     function contentInit() {
-        if (!userinfo.uid)
+        if (!userinfo)
             return window.location.assign('/');
 
         document.getElementById('email').textContent = userinfo.email;
-        document.getElementById('uname').textContent = userinfo.uname;
+        document.getElementById('username').textContent = userinfo.username;
         document.getElementById('score').textContent = userinfo.score;
     }
 </script>
