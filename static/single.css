@@ -1,12 +1,4 @@
 html {
-    min-height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-color: rgba(255, 255, 204, .15);
-}
-
-html {
     position: relative;
     min-height: 100%;
 }
