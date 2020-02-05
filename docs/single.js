@@ -7,7 +7,7 @@ function loadingError(e) {
 function api(path, args = false) {
     // lol api
     let apiURL = '/api/';
-    return (args ?
+    return ((args && false) ? // remove "&&false" later
         fetch(apiURL + path, { cache: "no-cache", method: 'POST', body: JSON.stringify(args) }) :
         fetch(apiURL + path, { cache: "no-cache" })
     ).then(x => x.json());
