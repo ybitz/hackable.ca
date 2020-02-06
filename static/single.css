@@ -33,9 +33,10 @@ header a {
     overflow: hidden;
 }
 
-#navbar>#logo {
+#logo {
     color: white;
     font-weight: bold;
+    margin: 0 20px;
 }
 
 #navbar>a {
@@ -71,7 +72,7 @@ header a {
         flex-direction: column;
         width: 100%;
     }
-    #navbar>a {
+    #navbar>* {
         border-bottom: 1px solid black;
         margin: 0 40px;
         text-align: center;
