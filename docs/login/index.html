@@ -16,8 +16,8 @@
     
 <header>
     <div class="capWidth">
-        <a id="logo" href="/">hackable.ca</a>
         <div id="navbar">
+            <a id="logo" href="/">hackable.ca</a>
             <a id="tab_" href="/">home</a>
             <a id="tab_challenges" href="/challenges/">challenges</a>
             <a id="tab_scoreboard" href="/scoreboard/">scoreboard</a>
@@ -26,8 +26,13 @@
             <a style="display:none;" id="tab_register" href="/register/">register</a>
             <a style="display:none;" id="tab_login" href="/login/">login</a>
         </div>
+        <button id="toggleNav">|||</button>
     </div>
 </header>
+<script>
+    document.getElementById('toggleNav').addEventListener('click', () =>
+        document.getElementById('navbar').classList.toggle('navExpand'));
+</script>
 
 <div class="capWidth">
     
@@ -36,27 +41,19 @@
     <table>
         <tr>
             <th class="loginLabel">E-Mail Address:</th>
-            <th class="loginInput">
-                <input id="email" type="email" class="form-control" name="email" value="" required="" autofocus="">
-            </th>
+            <th class="loginInput"> <input id="email" type="email" required autofocus> </th>
         </tr>
         <tr>
             <th class="loginLabel">Password:</th>
-            <th class="loginInput">
-                <input id="password" type="password" class="form-control" name="password" required="">
-            </th>
+            <th class="loginInput"> <input id="password" type="password" required> </th>
         </tr>
         <tr>
             <th class="loginLabel">Remember Me</th>
-            <th class="loginInput">
-                <input id="rememberMe" type="checkbox" name="remember" checked>
-            </th>
+            <th class="loginInput"> <input id="rememberMe" type="checkbox" checked> </th>
         </tr>
         <tr>
             <th></th>
-            <th class="loginInput">
-                <input type="submit" name="remember" value="Login">
-            </th>
+            <th class="loginInput"> <input type="submit" value="Login"> </th>
         </tr>
     </table>
 </form>

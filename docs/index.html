@@ -17,8 +17,8 @@
     
 <header>
     <div class="capWidth">
-        <a id="logo" href="/">hackable.ca</a>
         <div id="navbar">
+            <a id="logo" href="/">hackable.ca</a>
             <a id="tab_" href="/">home</a>
             <a id="tab_challenges" href="/challenges/">challenges</a>
             <a id="tab_scoreboard" href="/scoreboard/">scoreboard</a>
@@ -27,8 +27,13 @@
             <a style="display:none;" id="tab_register" href="/register/">register</a>
             <a style="display:none;" id="tab_login" href="/login/">login</a>
         </div>
+        <button id="toggleNav">|||</button>
     </div>
 </header>
+<script>
+    document.getElementById('toggleNav').addEventListener('click', () =>
+        document.getElementById('navbar').classList.toggle('navExpand'));
+</script>
 
 <div class="capWidth">
     
