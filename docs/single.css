@@ -36,11 +36,13 @@ header a {
 #logo {
     color: white;
     font-weight: bold;
+}
+
+#navbar>* {
     margin: 0 20px;
 }
 
 #navbar>a {
-    margin: 0 20px;
     color: rgba(255, 255, 255, .5);
 }
 
