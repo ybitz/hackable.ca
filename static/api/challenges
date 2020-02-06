@@ -4,6 +4,26 @@
         {"title":"user agent","points":4,"solves":888,"solved":true,"text":"change the user-agent"}
     ]},
     {"title":"pwn","chals":[
-        {"title":"easy rop","points":50,"solves":777,"solved":false,"text":"<a href='//x.org'>download</a>"}
+        {"title":"easy rop","points":50,"solves":777,"solved":false,"text":"<a href='//x.org'>download</a>"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"}
+    ]},
+    {"title":"misc","chals":[
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
+        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"}
     ]}
 ]

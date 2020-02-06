@@ -26,16 +26,16 @@ header a {
     text-decoration: none;
 }
 
-#navbar>#logo {
-    color: white;
-    font-weight: bold;
-}
-
 #navbar {
     display: inline-flex;
     height: 50px;
     transition: height .2s ease-out;
     overflow: hidden;
+}
+
+#navbar>#logo {
+    color: white;
+    font-weight: bold;
 }
 
 #navbar>a {
@@ -99,6 +99,12 @@ header a {
     width: 180px;
     text-align: center;
     cursor: pointer;
+    flex-grow: 1;
+}
+
+.challengeSection {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .loginLabel {
