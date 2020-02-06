@@ -27,8 +27,8 @@ header a {
 }
 
 #navbar>#logo {
-    margin-right: 30px;
     color: white;
+    font-weight: bold;
 }
 
 #navbar {
@@ -65,10 +65,16 @@ header a {
         display: inline-block;
     }
     #navbar.navExpand {
-        height: 300px;
+        height: 305px;
     }
     #navbar {
         flex-direction: column;
+        width: 100%;
+    }
+    #navbar>a {
+        border-bottom: 1px solid black;
+        margin: 0 40px;
+        text-align: center;
     }
 }
 
