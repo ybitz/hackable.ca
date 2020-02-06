@@ -5,9 +5,11 @@ title: Challenges
 
 <h1>Challenges!</h1>
 <div id="challenges"></div>
+
 <script>
      function challengeDetails(chal) {
-          alert(JSON.stringify(chal));
+          // alert(JSON.stringify(chal));
+          window.location.href = `#${chal.id}-modal`;
      }
      function contentInit() {
           api('challenges').then(function (j) {
@@ -19,13 +21,21 @@ title: Challenges
                     allChallenges.appendChild(sectionTitle);
 
                     let sectionDiv = document.createElement('div');
-                    sectionDiv.classList.add('challengeSection');
                     for (let chal of section.chals) {
                          let card = document.createElement('div');
                          card.classList.add('challengeCard')
                          card.style.backgroundColor = chal.solved ? "#28a745" : "#dc3545";
-                         card.innerHTML = `<br><b>${chal.title}</b>
-                                           <br>${chal.points} points<br><br>`;
+                         card.innerHTML =   `<br><b>${chal.title}</b>
+                                            <br>${chal.points} point<br><br>
+                                            <div id="${chal.id}-modal" class="modal-window">
+                                                <div class="modal-content">
+                                                    <a href="#modal-close" title="Close" class="modal-close">&times;</a>
+                                                    <h3>${chal.title}</h3>
+                                                    ${chal.text}<br>
+                                                    <b>Points</b>: ${chal.points}<br>
+                                                    <b>Solves</b>: ${chal.solves}<br>
+                                                </div>
+                                            </div>`;
                          card.onclick = () => challengeDetails(chal);
                          sectionDiv.appendChild(card);
                     }
@@ -34,4 +44,5 @@ title: Challenges
                }
           }).catch(loadingError);
      }
+
 </script>

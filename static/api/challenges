@@ -1,29 +1,9 @@
 [
     {"title":"web","chals":[
-        {"title":"kiss","points":1,"solves":999,"solved":false,"text":"find the flag"},
-        {"title":"user agent","points":4,"solves":888,"solved":true,"text":"change the user-agent"}
+        {"id":"kiss","title":"kiss","points":1,"solves":999,"solved":false,"text":"find the flag"},
+        {"id":"user_agent","title":"user agent","points":4,"solves":888,"solved":true,"text":"change the user-agent"}
     ]},
     {"title":"pwn","chals":[
-        {"title":"easy rop","points":50,"solves":777,"solved":false,"text":"<a href='//x.org'>download</a>"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"}
-    ]},
-    {"title":"misc","chals":[
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"},
-        {"title":"copy pasta","points":0,"solves":123,"solved":false,"text":"vvvvvvvvvvvvvvvvvvvvvvv"}
+        {"id":"easy_rop","title":"easy rop","points":50,"solves":777,"solved":false,"text":"<a href='//x.org'>download</a>"}
     ]}
 ]
