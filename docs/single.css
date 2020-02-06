@@ -46,6 +46,7 @@ header a {
 .capWidth {
     margin: auto;
     max-width: 900px;
+    padding: 0 10px;
 }
 
 #toggleNav {
@@ -53,6 +54,10 @@ header a {
     position: absolute;
     right: 0;
     height: 50px;
+    width: 50px;
+    background-color: grey;
+    text-align: center;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 700px) {
@@ -82,10 +87,12 @@ header a {
 
 .challengeCard {
     display: inline-block;
-    padding: 1em 2em;
-    margin: 1em;
+    margin: 8px;
     border-radius: 4px;
     color: white;
+    width: 180px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .loginLabel {

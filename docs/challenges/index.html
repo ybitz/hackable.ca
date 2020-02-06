@@ -26,7 +26,7 @@
             <a style="display:none;" id="tab_register" href="/register/">register</a>
             <a style="display:none;" id="tab_login" href="/login/">login</a>
         </div>
-        <button id="toggleNav">|||</button>
+        <div id="toggleNav">|||</div>
     </div>
 </header>
 <script>
@@ -44,23 +44,24 @@
      }
      function contentInit() {
           api('challenges').then(function (j) {
-               let chalDiv = document.getElementById('challenges')
+               let allChallenges = document.getElementById('challenges')
                for (let section of j) {
-                    let sectionTitle = document.createElement('h2');
+                    let sectionTitle = document.createElement('div');
                     sectionTitle.textContent = section.title;
-                    chalDiv.appendChild(sectionTitle);
+                    sectionTitle.style.fontSize = '1.5em';
+                    allChallenges.appendChild(sectionTitle);
 
                     let sectionDiv = document.createElement('div');
                     for (let chal of section.chals) {
                          let card = document.createElement('div');
                          card.classList.add('challengeCard')
                          card.style.backgroundColor = chal.solved ? "#28a745" : "#dc3545";
-                         card.innerHTML = `<b>${chal.title}</b><br>
-                                             ${chal.points} points`;
+                         card.innerHTML = `<br><b>${chal.title}</b>
+                                           <br>${chal.points} points<br><br>`;
                          card.onclick = () => challengeDetails(chal);
                          sectionDiv.appendChild(card);
                     }
-                    chalDiv.appendChild(sectionDiv);
+                    allChallenges.appendChild(sectionDiv);
 
                }
           }).catch(loadingError);
