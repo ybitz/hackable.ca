@@ -17,6 +17,7 @@ footer {
 }
 
 header {
+    position: relative;
     line-height: 50px;
     background-color: #343a40;
 }
@@ -25,13 +26,16 @@ header a {
     text-decoration: none;
 }
 
-#logo {
+#navbar>#logo {
     margin-right: 30px;
     color: white;
 }
 
 #navbar {
     display: inline-flex;
+    height: 50px;
+    transition: height .2s ease-out;
+    overflow: hidden;
 }
 
 #navbar>a {
@@ -42,6 +46,25 @@ header a {
 .capWidth {
     margin: auto;
     max-width: 900px;
+}
+
+#toggleNav {
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+    #toggleNav{
+        display: inline-block;
+    }
+    #navbar.navExpand {
+        height: 300px;
+    }
+    #navbar {
+        flex-direction: column;
+    }
 }
 
 /* begin page-specific styles */
